@@ -1,0 +1,30 @@
+.myform{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.4);
+    border-radius: 1.1rem;
+    outline: 0;
+    max-width: 500px;
+     }
+
+.container{
+    margin-top: 100px;
+}
+/* body{
+    background-image: url(https://www.visittheusa.fr/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-05/23b0b0b9caaa07ee409b693da9bf9003.jpeg?itok=NI7EBwBG) ;
+    height: 100%;
+
+    filter: blur(8px);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
