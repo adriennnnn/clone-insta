@@ -14,8 +14,9 @@ include '../utils/link.php';
     
     if ($result) {
 
-    header('Location: ../page1.php?id='.$result[`id`]);
-
+    header('Location: ../page1.php?id='.$result['id']);
+        var_dump('coucou');
+        die;
     }else {
         $pdostmt = $bdd->prepare('INSERT INTO `users`(`ip_creation`, `pseudo`) VALUES (?,?)');
         $result = $pdostmt->execute([$_SERVER['REMOTE_ADDR'],$_POST['Pseudo']]);

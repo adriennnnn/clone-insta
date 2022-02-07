@@ -1,5 +1,5 @@
 <?php include 'partials/header.php';
-include 'process/login.php';
+// include 'process/login.php';
 ?>
 <h1>instaScam</h1>
 
