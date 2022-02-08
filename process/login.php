@@ -14,14 +14,14 @@ include '../utils/link.php';
     
     if ($result) {
 
-    header('Location: ../page1.php?id='.$result['id']);
+    header('Location: ../profil.php?id='.$result['id']);
         var_dump('coucou');
         die;
     }else {
         $pdostmt = $bdd->prepare('INSERT INTO `users`(`ip_creation`, `pseudo`) VALUES (?,?)');
         $result = $pdostmt->execute([$_SERVER['REMOTE_ADDR'],$_POST['Pseudo']]);
 
-        header('Location: ../page1.php?id='.$bdd->lastInsertId());
+        header('Location: ../profil.php?id='.$bdd->lastInsertId());
     }
 }else{
     // header('location: ../index.php');

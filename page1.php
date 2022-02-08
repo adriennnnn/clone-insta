@@ -1,1 +1,0 @@
-<h1>bienvenue <?= $_GET['id'] ?></h1>
