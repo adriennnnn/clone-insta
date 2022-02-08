@@ -7,36 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>instascam</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="../style/style.css" rel="stylesheet">
+    <!-- <link href="../style/style.css" rel="stylesheet"> -->
+    <link href="../style/style_header.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-1">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">bouton de libre</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/S3exo2/base.php"> Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/S3exo2/ajout-patient.php">Ajouter un patient</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/S3exo2/liste-patients.php">Liste patient</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/S3exo2/ajout-rdv.php">Nouveau rendez-vous</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/S3exo2/liste-rdv.php">Liste rendez-vous</a>
-                        </li>
-                   
-                    </ul>
+        <div class="navigation">
+            <div class="logo">
+                <a class="no-underline" href="#">
+                    InstaScam
+                </a>
+            </div>
+            <div class="navigation-search-container">
+                <i class="fa fa-search"></i>
+                <input class="search-field" type="text" placeholder="Search">
+                <div class="search-container">
+                    <div class="search-container-box">
+                        <div class="search-results">
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav> -->
+            <div class="navigation-icons">
+                <a href="./home.php" target="_blank" class="navigation-link">
+                    <i class="fa fa-compass"></i>
+                </a>
+                <a href="./profil.php?id=?'.<?=$_GET['id']?>.'" class="navigation-link">
+                    <i class="fa fa-plus-square"></i>
+                </a>
+                <a href="./profil.php?id=?'.<?=$_GET['id']?>.'" class="navigation-link">
+                    <i class="fa fa-user-circle"></i>
+                </a>
+
+            </div>
+        </div>
     </header>
+    <br>
+    <br>
+    <br>
+    <br>

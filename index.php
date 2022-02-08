@@ -1,6 +1,9 @@
-<?php include 'partials/header.php';
+<?php 
+// include 'partials/header.php';
 // include 'process/login.php';
 ?>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="./style/style_index.css" rel="stylesheet">
 <h1>instaScam</h1>
 
 <!-- <div class="bg-img"> -->

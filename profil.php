@@ -9,7 +9,7 @@ $result = $pdo->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <?php
-//  include 'partials/header.php'; 
+ include 'partials/header.php'; 
 ?>
 
 <link href="./style/style_profil.css" rel="stylesheet">
@@ -20,9 +20,10 @@ $result = $pdo->fetch(PDO::FETCH_ASSOC);
         </div>
         <div class="profile-user-settings">
             <h1 class="profile-user-name"><?= $result['pseudo'] ?></h1>
-            <form action="./profil_edit.php">
-            <button class="btn profile-edit-btn">Edit Profile</button>
-            <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
+            <form action="./profil_edit.php" method="post">
+                <button class="btn profile-edit-btn">Edit Profile</button>
+                <input type="hidden" name="user_id" value="<?=$result['id']?>">
+                <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
             </form>
         </div>
         <div class="profile-stats">
@@ -33,7 +34,7 @@ $result = $pdo->fetch(PDO::FETCH_ASSOC);
             </ul>
         </div>
         <div class="profile-bio">
-            <p><span class="profile-real-name">Jane Doe</span><?= $result['description'] ?> 📷✈️🏕️</p>
+            <p><span class="profile-real-name"></span><?= $result['description'] ?> 📷✈️🏕️</p>
         </div>
     </div>
     <!-- fin de profile section -->
