@@ -5,9 +5,9 @@ $DB = "SELECT * FROM users WHERE id = ?";
 $pdo = $bdd->prepare($DB);
 $result = $pdo->execute(array($_GET['id']));
 $result = $pdo->fetch(PDO::FETCH_ASSOC);
-
+// var_dump($result);
+// die;
 ?>
-
 <?php
  include 'partials/header.php'; 
 ?>

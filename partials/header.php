@@ -1,6 +1,6 @@
+<?php session_start() ; ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,13 +34,15 @@
                 <a href="./home.php" target="_blank" class="navigation-link">
                     <i class="fa fa-compass"></i>
                 </a>
-                <a href="./profil.php?id=?'.<?=$_GET['id']?>.'" class="navigation-link">
+                <a href="./profil.php?id=?<?=$_GET['id']?>" class="navigation-link">
                     <i class="fa fa-plus-square"></i>
                 </a>
-                <a href="./profil.php?id=?'.<?=$_GET['id']?>.'" class="navigation-link">
+                <a href="./profil.php?id=<?= $_SESSION['id']?>" class="navigation-link">
                     <i class="fa fa-user-circle"></i>
                 </a>
-
+                <a href="./profil.php?id=?id=<?=$_SESSION['id']?>" class="navigation-link">
+                    <i class="fa fa-sign-out"></i>
+                </a>
             </div>
         </div>
     </header>
