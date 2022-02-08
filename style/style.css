@@ -14,17 +14,18 @@
     outline: 0;
     max-width: 500px;
      }
-
 .container{
-    margin-top: 100px;
-}
-/* body{
-    background-image: url(https://www.visittheusa.fr/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-05/23b0b0b9caaa07ee409b693da9bf9003.jpeg?itok=NI7EBwBG) ;
-    height: 100%;
+    margin-top: 200px;
+   }
+       
+body{
+    background-image:url("../image/image.jpg");
+    background-size: cover; /* permet de ne pas dubliquer l'image*/
+    backdrop-filter: blur(3px);
+    height:100vh;
+   }
+h1 {
+   text-align: center;
+   }
 
-    filter: blur(8px);
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
