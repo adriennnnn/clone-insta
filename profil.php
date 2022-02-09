@@ -29,8 +29,8 @@ include 'partials/header.php';
         <div class="profile-stats">
             <ul>
                 <li><span class="profile-stat-count">2727</span> posts</li>
-                <li><span class="profile-stat-count">42</span> followers</li>
-                <li><span class="profile-stat-count">rien</span> following</li>
+                <li><span class="profile-stat-count">42</span> adrien</li>
+                <li><span class="profile-stat-count">0</span> Thomas</li>
             </ul>
         </div>
         <div class="profile-bio">
@@ -51,21 +51,25 @@ foreach($rlt as $rlts){
 ?>
 
 <div class="profile-section">
+    <div class="d-flex bd-highlight mb-3">
     <div class="gallery">
-        <div class="gallery-item" tabindex="0">
+        <div class="d-flex flex-wrap" tabindex="0">
+     
             <img src="<?=$rlts['url_post']?>" class="gallery-image" alt="">
-            <div class="modal-body">
-            </div>
-<!-- 
-            <div class="gallery-item-info">
+        
+            <!-- <div class="modal-body">
+            </div> -->
+ 
+            <!-- <div class="gallery-item-info">
                 <ul>
                     <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> <!-- nombre de like-->
-            <!--        </li>
+                  <!--  </li>
                     <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> <!-- nombre de commentaire -->
-                <!--    </li>
+                <!--  </li>
                 </ul>
-            </div> -->
+            </div>  -->
         </div>
+    </div>
     </div>
 </div>
 
