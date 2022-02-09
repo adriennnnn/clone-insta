@@ -10,8 +10,6 @@ include '../utils/link.php';
     $result = $pdostmtUser->fetch();
     // $user = pdostmtUser->fetch(PDO::FETCH_ASSOC);
 
-    $_SESSION['pseudo'] = $result['pseudo'];
-    $_SESSION['id'] = $result['id'];
     // $_SESSION['']
 
     
@@ -24,8 +22,15 @@ include '../utils/link.php';
         $result = $pdostmt->execute([$_SERVER['REMOTE_ADDR'],$_POST['Pseudo']]);
 
         header('Location: ../profil.php?id='.$bdd->lastInsertId());
+        // var_dump("ttt");
+        // die;
     }
 }else{
     // header('location: ../index.php');
 }
+
+
+
+    $_SESSION['pseudo'] = $result['pseudo'];
+    $_SESSION['id'] = $result['id'];
 ?>

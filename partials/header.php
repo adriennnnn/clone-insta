@@ -31,10 +31,10 @@
                 </div>
             </div>
             <div class="navigation-icons">
-                <a href="./home.php" target="_blank" class="navigation-link">
+                <a href="../home.php?id=<?= $_SESSION['id']?>" target="_blank" class="navigation-link">
                     <i class="fa fa-compass"></i>
                 </a>
-                <a href="./profil.php?id=?<?=$_GET['id']?>" class="navigation-link">
+                <a href="../creat-post.php?id=<?= $_SESSION['id']?>" class="navigation-link">
                     <i class="fa fa-plus-square"></i>
                 </a>
                 <a href="./profil.php?id=<?= $_SESSION['id']?>" class="navigation-link">

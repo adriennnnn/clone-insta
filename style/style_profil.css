@@ -211,7 +211,7 @@ img {
     animation: loader 500ms linear infinite;
 } */
 
-/* Media Query */
+/* Media Query taille de l'ecran*/
 
 @media screen and (max-width: 40rem) {
     .profile {

@@ -27,7 +27,7 @@ if (isset($_POST['user_id'])) {
                 <div class="textarea">
                     <textarea name="Descrition" value="<?= $result['description'] ?>"></textarea>
                 </div>
-                <input type="submit" value="Envoyer">
+                <input type="submit" value="Modifier">
             </form>
         </div>
 <?php

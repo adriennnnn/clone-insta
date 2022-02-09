@@ -4,8 +4,7 @@ if (isset($_POST['Pseudo'])
 && !empty($_POST['Pseudo']) 
 && isset($_POST['Pdp']) 
 && !empty($_POST['Pdp'])
-&& isset($_POST['Descrition']) 
-&& !empty($_POST['Descrition'])) {
+&& isset($_POST['Descrition'])) {
 
 // $id = $_GET['User_id'];    
     include '../utils/link.php';
