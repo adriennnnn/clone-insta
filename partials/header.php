@@ -40,7 +40,7 @@
                 <a href="./profil.php?id=<?= $_SESSION['id']?>" class="navigation-link">
                     <i class="fa fa-user-circle"></i>
                 </a>
-                <a href="./profil.php?id=?id=<?=$_SESSION['id']?>" class="navigation-link">
+                <a href="../process/logout.php?id=<?$_SESSION['id']?>" class="navigation-link">
                     <i class="fa fa-sign-out"></i>
                 </a>
             </div>

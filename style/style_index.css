@@ -1,3 +1,4 @@
+@import url('//fonts.cdnfonts.com/css/billabong');
 .myform{
     position: relative;
     display: -ms-flexbox;
@@ -24,8 +25,18 @@ body{
     backdrop-filter: blur(3px);
     height:100vh;
    }
-h1 {
-   text-align: center;
-   }
+.logo h1{
+    padding: 25px 0 0 5%;
+   text-align: left;
+   position: relative;
+   color: #000000;
+   font-size: 50px;
+   font-family: "billabong", sans-serif;
+   text-decoration: none;
+}
+/* .logo{
+    border: 3px solid rgb(208, 1, 1);
+    border-radius: 5%;
+} */
 
 
