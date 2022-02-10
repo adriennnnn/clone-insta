@@ -140,15 +140,12 @@ img {
 /* partie Gallery */
 
 .gallery {
-    /* grid-template-columns: 100px 50px 100px;
-    grid-template-rows: 80px auto 80px; 
-    column-gap: 10px;
-    row-gap: 15px; */
-
-    display: flex;
-    flex-direction: row;
-    margin: -1rem -1rem;
-    padding-bottom: 3rem;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: grid;
+    gap: 30px;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .gallery-item {
@@ -337,19 +334,42 @@ img {
     }
 
     .gallery {
+        /* display: grid;
+        gap: 30px;
+        justify-content: space-between;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+         */
         margin-left: 15%;
-        margin-right: 15%;
+        margin-right: 10%;
         padding: 10px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
         grid-gap: 2rem;
-    }
+    } 
 
 
 
 
 
     @media (max-width: 40rem) {
+
+        .gallery {
+            /* display: grid;
+            gap: 30px;
+            justify-content: space-between;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+             */
+            margin-left: 10%;
+            margin-right: 5%;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+            grid-gap: 2rem;
+        } 
+    
+
+
+
         .profile {
             grid-template-columns: auto 1fr;
             grid-row-gap: 1.5rem;

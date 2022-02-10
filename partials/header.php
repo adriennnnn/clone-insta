@@ -1,6 +1,7 @@
-<?php session_start() ; ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link href="../style/style_header.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
         <div class="navigation">
@@ -21,7 +23,9 @@
             </div>
             <div class="navigation-search-container">
                 <i class="fa fa-search"></i>
-                <input class="search-field" type="text" placeholder="Search">
+                <form action="../process/search.php" method="post">
+                    <input class="search-field" type="text" name="Search" placeholder="Rechercher">
+                </form>
                 <div class="search-container">
                     <div class="search-container-box">
                         <div class="search-results">
@@ -30,17 +34,18 @@
                     </div>
                 </div>
             </div>
+            <!-- target="_blank"  a place  dans un <a> et permet d'ouvrire un url dans une nouvelle page-->
             <div class="navigation-icons">
-                <a href="../home.php?id=<?= $_SESSION['id']?>" target="_blank" class="navigation-link">
+                <a href="../home.php?id=<?= $_SESSION['id'] ?>" class="navigation-link">
                     <i class="fa fa-compass"></i>
                 </a>
-                <a href="../creat-post.php?id=<?= $_SESSION['id']?>" class="navigation-link">
+                <a href="../creat-post.php?id=<?= $_SESSION['id'] ?>" class="navigation-link">
                     <i class="fa fa-plus-square"></i>
                 </a>
-                <a href="./profil.php?id=<?= $_SESSION['id']?>" class="navigation-link">
+                <a href="./profil.php?id=<?= $_SESSION['id'] ?>" class="navigation-link">
                     <i class="fa fa-user-circle"></i>
                 </a>
-                <a href="../process/logout.php?id=<?$_SESSION['id']?>" class="navigation-link">
+                <a href="../process/logout.php?id=<? $_SESSION['id'] ?>" class="navigation-link">
                     <i class="fa fa-sign-out"></i>
                 </a>
             </div>

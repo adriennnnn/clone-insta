@@ -44,37 +44,43 @@ include 'partials/header.php';
 <?php
 $DaB = "SELECT * FROM `post` WHERE id_user= ?";
 $pdostment = $bdd->prepare($DaB);
-$rlt = $pdostment->execute([$_SESSION['id']]);
+$rlt = $pdostment->execute([$_GET['id']]);
 $rlt = $pdostment->fetchAll(PDO::FETCH_ASSOC);
 
-foreach($rlt as $rlts){
+
 ?>
 
 <div class="profile-section">
-    <div class="d-flex bd-highlight mb-3">
-    <div class="gallery">
-        <div class="d-flex flex-wrap" tabindex="0">
-     
-            <img src="<?=$rlts['url_post']?>" class="gallery-image" alt="">
-        
-            <!-- <div class="modal-body">
-            </div> -->
- 
-            <!-- <div class="gallery-item-info">
+    <div class="">
+        <div class="gallery">
+            <?php foreach ($rlt as $rlts) { ?>
+                <div class="gallery-item">
+                <img src="<?= $rlts['url_post'] ?>" class="gallery-image" alt="">
+                </div>
+            <?php } ?>
+
+            <div class="modal-body">
+            </div>
+
+            <div class="gallery-item-info">
                 <ul>
                     <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> <!-- nombre de like-->
-                  <!--  </li>
+                    </li>
                     <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> <!-- nombre de commentaire -->
-                <!--  </li>
+                    </li>
                 </ul>
-            </div>  -->
+            </div>
+
+
+
+
+            
         </div>
-    </div>
     </div>
 </div>
 
 
 <?php
-}
+
 include './partials/footer.php';
 ?>
