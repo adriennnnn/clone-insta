@@ -21,16 +21,26 @@ include 'partials/header.php';
         <div class="profile-user-settings">
             <h1 class="profile-user-name"><?= $result['pseudo'] ?></h1>
             <form action="./profil_edit.php" method="post">
+                <?php 
+                if ($_SESSION['id']==$_GET['id']) : ?>
                 <button class="btn profile-edit-btn">Edit Profile</button>
+                      <?php endif; ?>  
                 <input type="hidden" name="user_id" value="<?= $result['id'] ?>">
                 <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
             </form>
         </div>
         <div class="profile-stats">
             <ul>
-                <li><span class="profile-stat-count">2727</span> posts</li>
-                <li><span class="profile-stat-count">42</span> adrien</li>
-                <li><span class="profile-stat-count">0</span> Thomas</li>
+                <?php
+                $idpost = $_GET['id'] ;
+                $tt = "SELECT COUNT(*) as posts FROM post WHERE id_user = '$idpost' ";
+                $pdo2 = $bdd->prepare($tt);
+                $rst = $pdo2->execute();
+                $rst = $pdo2->fetch(PDO::FETCH_ASSOC);
+                ?>
+                <li><span class="profile-stat-count"><?=$rst['posts']?></span> posts</li>
+                <li><span class="profile-stat-count">1</span> adrien</li>
+                <li><span class="profile-stat-count">3 178 643</span> Thomas</li>
             </ul>
         </div>
         <div class="profile-bio">
@@ -46,22 +56,34 @@ $DaB = "SELECT * FROM `post` WHERE id_user= ?";
 $pdostment = $bdd->prepare($DaB);
 $rlt = $pdostment->execute([$_GET['id']]);
 $rlt = $pdostment->fetchAll(PDO::FETCH_ASSOC);
-
-
 ?>
-
 <div class="profile-section">
     <div class="">
         <div class="gallery">
+
+
+
+
             <?php foreach ($rlt as $rlts) { ?>
                 <div class="gallery-item">
                 <img src="<?= $rlts['url_post'] ?>" class="gallery-image" alt="">
                 </div>
             <?php } ?>
 
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="modal-body">
             </div>
-
             <div class="gallery-item-info">
                 <ul>
                     <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> <!-- nombre de like-->
@@ -79,8 +101,8 @@ $rlt = $pdostment->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-
 <?php
 
 include './partials/footer.php';
 ?>
+<script src="./process/modal.js"></script>

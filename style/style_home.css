@@ -33,9 +33,28 @@
     overflow-x: auto;
 }
 
-.status-wrapper::-webkit-scrollbar{
+ /* .status-wrapper::-webkit-scrollbar{
     display: none;
+}  */
+
+/* fonctionn sans cette div mais plus difficile a utiliser< */
+.visible-scrollbar::-webkit-scrollba 
+.horizontal-scroll-wrapper{
+    position:absolute;
+    display:block;
+    top:0;
+    left:0;
+    width:80px;
+    max-height:500px;
+    margin:0;
+    background:#abc;
+    overflow-y:auto;
+    overflow-x:hidden;
+    transform:rotate(-90deg) translateY(-80px);
+    transform-origin:right top;
 }
+
+
 .status-card{
     flex: 0 0 auto;
     width: 80px;

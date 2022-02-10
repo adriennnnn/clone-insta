@@ -6,7 +6,7 @@ if(isset($_POST['Pseudo']) &&
 include '../utils/link.php'; 
 
     $pdostmtUser = $bdd->prepare('SELECT `pseudo`,`id` FROM `users` WHERE pseudo = ?');
-    $pdostmtUser->execute([$_POST['Pseudo']]);
+    $pdostmtUser->execute([$_POST['Pseudo']] );
     $result = $pdostmtUser->fetch();
     // $user = pdostmtUser->fetch(PDO::FETCH_ASSOC);
 
