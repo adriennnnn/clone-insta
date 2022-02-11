@@ -1,7 +1,8 @@
 
+console.log("testing");
 
-const images = document.querySelectorAll(".gallery__item img");
-let imgSrc;
+const images = document.querySelectorAll(".gallery-image");
+let imgSrc;       // variable ou vont etre stoker les image
 // get images src onclick
 images.forEach((img) => {
     img.addEventListener("click", (e) => {
@@ -19,9 +20,19 @@ let imgModal = (src) => {
     //adding image to modal
     const newImage = document.createElement("img");
     newImage.setAttribute("src", src);
+    //ajouter une partie commentaire a la modal
+    const PartComment = document.createElement("comment");
+    PartComment.setAttribute("src", src);
+
+
+
+
+
+
+
     //creating the close button
     const closeBtn = document.createElement("i");
-    closeBtn.setAttribute("class", "fas fa-times closeBtn");
+    closeBtn.setAttribute("class", "fa fa-crosshairs"); // ne pas ouvlier de changer le style de btn qui n'est pas dans le base de ref inclu dans le header
     //close function
     closeBtn.onclick = () => {
         modal.remove();

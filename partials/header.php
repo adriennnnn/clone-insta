@@ -17,7 +17,7 @@
     <header>
         <div class="navigation">
             <div class="logo">
-                <a class="no-underline" href="#">
+                <a class="no-underline" href="../home.php">
                     InstaScam
                 </a>
             </div>

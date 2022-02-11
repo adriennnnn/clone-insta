@@ -138,6 +138,14 @@ img {
 }
 
 /* partie Gallery */
+.main {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 60px 0px;
+}
 
 .gallery {
     /* display: grid;
@@ -147,16 +155,77 @@ img {
     justify-content: space-between;
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+/* PARTIE HOVER GALLERY */
 
 .gallery-item {
-    position: relative;
+    /* position: relative;
     flex: 1 0 22rem;
-    margin: 1rem;
-    color: #fff;
+    margin: 160px;
+    color: #fff; */
     cursor: pointer; 
+    overflow: hidden;
+    border-radius: 4px;
 }
 
-.gallery-item:hover .gallery-item-info,
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*définit la façon dont le contenu   doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.*/
+    transition: 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    filter: grayscale();
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*Image modal normalement ce css ne s'applique que en cas de click*/
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    margin-top: -1px;
+    animation: zoom 0.3s ease-in-out;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.modal img {
+    width: auto;
+    object-fit: fill; /*permet d'afficher l'img selon la taille de l'img de base*/
+    transform: scale(2);
+
+}
+
+.closeBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* .gallery-item:hover .gallery-item-info,
 .gallery-item:focus .gallery-item-info {
     display: flex;
     justify-content: center;
@@ -188,7 +257,7 @@ img {
     right: 1rem;
     font-size: 2.5rem;
     text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-}
+} */
 
 .fa-clone,
 .fa-comment {
@@ -342,9 +411,9 @@ img {
         margin-left: 15%;
         margin-right: 10%;
         padding: 10px;
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-        grid-gap: 2rem;
+        grid-gap: 2rem; */
     } 
 
 

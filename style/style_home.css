@@ -29,16 +29,16 @@
     padding-right: 0;
     display: flex;
     align-items: center;
-    overflow: hidden; 
-    overflow-x: auto;
+    overflow: hidden;  
+    overflow-x: auto; 
 }
-
- /* .status-wrapper::-webkit-scrollbar{
+/* scrollbar non afficher*/
+ .status-wrapper::-webkit-scrollbar{
     display: none;
-}  */
+} 
 
 /* fonctionn sans cette div mais plus difficile a utiliser< */
-.visible-scrollbar::-webkit-scrollba 
+/* .visible-scrollbar::-webkit-scrollba 
 .horizontal-scroll-wrapper{
     position:absolute;
     display:block;
@@ -52,7 +52,7 @@
     overflow-x:hidden;
     transform:rotate(-90deg) translateY(-80px);
     transform-origin:right top;
-}
+} */
 
 
 .status-card{

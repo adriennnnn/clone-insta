@@ -14,7 +14,7 @@ $pdostmt = $bdd->prepare('UPDATE  users SET pseudo = ?, profil_picture = ?, desc
 $result = $pdostmt->execute([$_POST['Pseudo'],$_POST['Pdp'],$_POST['Descrition'], $_GET['User_id']]);
     
 if ($result) {
-    header('Location: ../profil.php?id='.$_SESSION['id'].'?success=modification réussie !');
+    header('Location: ../profil.php?id='.$_SESSION['id'].'');
 } else {
     header('Location: ../profil.php?error=la modification a échoué');
 }
