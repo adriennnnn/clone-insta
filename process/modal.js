@@ -1,4 +1,3 @@
-
 console.log("testing");
 
 const images = document.querySelectorAll(".gallery-image");
@@ -7,17 +6,17 @@ let imgSrc;       // variable ou vont etre stoker les image
 images.forEach((img) => {
     img.addEventListener("click", (e) => {
         imgSrc = e.target.src;
-        //run modal function
+        //modal fonction
         imgModal(imgSrc);
     });
 });
-//creating the modal
+//modal
 let imgModal = (src) => {
     const modal = document.createElement("div");
     modal.setAttribute("class", "modal");
     //add the modal to the main section or the parent element
     document.querySelector(".main").append(modal);
-    //adding image to modal
+    //img modal
     const newImage = document.createElement("img");
     newImage.setAttribute("src", src);
     //ajouter une partie commentaire a la modal
@@ -30,12 +29,14 @@ let imgModal = (src) => {
 
 
 
-    //creating the close button
+    //btn 
     const closeBtn = document.createElement("i");
-    closeBtn.setAttribute("class", "fa fa-crosshairs"); // ne pas ouvlier de changer le style de btn qui n'est pas dans le base de ref inclu dans le header
-    //close function
+    closeBtn.setAttribute("class", "fa fa-crosshairs btn-close"); // ne pas ouvlier de changer le style de btn qui n'est pas dans le base de ref inclu dans le header
+    //fonction close
     closeBtn.onclick = () => {
         modal.remove();
     };
     modal.append(newImage, closeBtn);
 };
+
+

@@ -41,8 +41,6 @@ include 'partials/header.php';
                 $rst = $pdo2->fetch(PDO::FETCH_ASSOC);
                 ?>
                 <li><span class="profile-stat-count"><?= $rst['posts'] ?></span> posts</li>
-                <li><span class="profile-stat-count">1</span> adrien</li>
-                <li><span class="profile-stat-count">3 178 643</span> Thomas</li>
             </ul>
         </div>
         <div class="profile-bio">

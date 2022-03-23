@@ -1,6 +1,6 @@
 <?php session_start() ;?>
 <?php 
-if (isset($_SESSION['id'])) {
+
+    session_destroy();
     header('Location: ../index.php');
-} 
-session_destroy();
+    

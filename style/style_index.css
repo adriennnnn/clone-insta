@@ -16,11 +16,12 @@
     max-width: 500px;
      }
 .container{
-    margin-top: 200px;
+    margin-top: 60px;
    }
        
 body{
-    background-image:url("../image/image.jpg");
+    /* background-image:url("../image/image.jpg"); */
+    background-color: white;
     background-size: cover; /* permet de ne pas dubliquer l'image*/
     backdrop-filter: blur(3px);
     height:100vh;
@@ -38,5 +39,3 @@ body{
     border: 3px solid rgb(208, 1, 1);
     border-radius: 5%;
 } */
-
-
