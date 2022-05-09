@@ -44,14 +44,14 @@ $result = $pdo->fetchAll(PDO::FETCH_ASSOC);
                 $result = $pdo->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($result as $rlt) {
                 ?>
-                <div class="info">
-                    <div class="user">
-                    <a href="./profil.php?id=<?= $rlt['id'] ?>">
-                        <div class="profile-pic"><img src="<?= $rlt['profil_picture'] ?>" alt="pdp du post"></div>
-                        <p class="username"><?= $rlt['pseudo']?></p>
-                    </a>
+                    <div class="info">
+                        <div class="user">
+                            <a href="./profil.php?id=<?= $rlt['id'] ?>">
+                                <div class="profile-pic"><img src="<?= $rlt['profil_picture'] ?>" alt="pdp du post"></div>
+                                <p class="username"><?= $rlt['pseudo'] ?></p>
+                            </a>
+                        </div>
                     </div>
-                </div>
                     <div class="post-img">
                         <img src="<?= $rlt['url_post'] ?>">
                     </div>
