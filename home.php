@@ -37,7 +37,8 @@ $result = $pdo->fetchAll(PDO::FETCH_ASSOC);
         <div class="left-col">
             <div class="post">
                 <?php
-                $DB = "SELECT `url_post`, `id_user` FROM post ORDER BY `time_post` DESC";
+                // $DB = "SELECT `url_post`, `id_user` FROM post ORDER BY `time_post` DESC";
+                $DB = "SELECT * FROM post INNER JOIN users ON users.id = post.id_user ORDER BY time_post DESC";
                 $pdo = $bdd->prepare($DB);
                 $result = $pdo->execute();
                 $result = $pdo->fetchAll(PDO::FETCH_ASSOC);
@@ -45,8 +46,10 @@ $result = $pdo->fetchAll(PDO::FETCH_ASSOC);
                 ?>
                 <div class="info">
                     <div class="user">
+                    <a href="./profil.php?id=<?= $rlt['id'] ?>">
                         <div class="profile-pic"><img src="<?= $rlt['profil_picture'] ?>" alt="pdp du post"></div>
-                        <p class="username">non disponible</p>
+                        <p class="username"><?= $rlt['pseudo']?></p>
+                    </a>
                     </div>
                 </div>
                     <div class="post-img">

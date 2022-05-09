@@ -12,7 +12,7 @@ if(isset($_POST['imgUrl']) &&
     $result = $pdostmt->execute([$_SESSION['id'] ,$_SERVER['REMOTE_ADDR'],$_POST['imgUrl'], $_POST['DescritionPost']]);
 
     if ($result) {
-        header('Location: ../profil.php?id='.$_SESSION['id'].'?success=votre post a été ajouté avec succès !');
+        header('Location: ../profil.php?id='.$_SESSION['id'].'');
     } else {
         header('Location: ../profil.php?error=echec de la publication');
     }
