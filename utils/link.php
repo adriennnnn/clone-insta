@@ -1,7 +1,7 @@
 <?php
 try
     {
-        $bdd = new PDO('mysql:host=127.0.0.1;dbname=clone_insta', 'root', '', [
+        $bdd = new PDO('mysql:host=141.94.22.233;dbname=portfolio_adrien', 'adrien', 'garage404', [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]);
     }
