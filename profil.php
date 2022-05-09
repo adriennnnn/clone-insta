@@ -12,6 +12,9 @@ $result = $pdo->fetch(PDO::FETCH_ASSOC);
 <?php
 include 'partials/header.php';
 ?>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
+  <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
 
 <link href="./style/style_profil.css" rel="stylesheet">
 <div class="profile-section">
@@ -51,6 +54,7 @@ include 'partials/header.php';
 </div>
 
 <!-- gallery partie -->
+
 <?php
 $DaB = "SELECT * FROM `post` WHERE id_user= ?";
 $pdostment = $bdd->prepare($DaB);
@@ -71,27 +75,6 @@ $rlt = $pdostment->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-            <!-- <div class="modal-body">
-            </div>
-            <div class="gallery-item-info">
-                <ul>
-                    <!-- <li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> <!-- nombre de like-->
-            <!-- </li>
-                    <li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> <!-- nombre de commentaire -->
-            <!-- </li>
-                </ul> 
-            </div> -->
 
 
 

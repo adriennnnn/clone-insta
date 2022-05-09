@@ -18,7 +18,7 @@ if (isset($_GET['Error'])) {?>
 </div>
 
 
-<form action="./process/login.php" method="post">
+<!-- <form action="./process/login.php" method="post">
     <div class="mb-6">
         <label for="Pseudo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
         <input type="email" name="Pseudo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required="">
@@ -40,7 +40,7 @@ if (isset($_GET['Error'])) {?>
 
     </div>
         <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
-</form>
+</form> -->
 
 
 <div class="container">
@@ -50,7 +50,7 @@ if (isset($_GET['Error'])) {?>
                 <div class="myform form ">
                     <div class="logo mb-1">
                         <div class="col-md-12 text-center">
-                            <h2>Login</h2>
+                            <h2>Login & Connection</h2>
                         </div>
                     </div>
                     <form action="./process/login.php" method="post">
@@ -65,10 +65,10 @@ if (isset($_GET['Error'])) {?>
                         <p> <input type="checkbox" onclick="myFunctionVisibilityPassword()"> voir le mot  de passe</p>
 
                         <div class="form-group">
-                            <p class="text-center">regarder mon vrai compte instagram <a href="https://www.instagram.com/adrthms/">en cliquant ici</a></p>
+                            <p class="text-center">Abonnez-vous à mon vrai compte instagram <a href="https://www.instagram.com/adrthms/" target="_blank">en cliquant ici</a></p>
                         </div>
                         <div class="col-md-12 text-center ">
-                            <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
+                            <button type="submit" class="hover:transition-all  duration-300 rounded text-pink-500 border-2 border-pink-500 hover:bg-red-400 py-2 px-24 hover:text-white">Login</button>
                         </div>
                     </form>
                 </div>
