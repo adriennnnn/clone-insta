@@ -26,7 +26,8 @@ let imgModal = (src) => {
     state = true;
     //btn 
     const closeBtn = document.createElement("i");
-    closeBtn.setAttribute("class", "fa fa-crosshairs btn-close"); // ne pas ouvlier de changer le style de btn qui n'est pas dans le base de ref inclu dans le header
+    closeBtn.setAttribute("class", "X"); // ne pas ouvlier de changer le style de btn qui n'est pas dans le base de ref inclu dans le header
+    //fa fa-crosshairs btn-close
     //fonction close
     closeBtn.onclick = () => {
         modal.remove();
